@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet"');
+        
+body {
+    font-family: "Zen Maru Gothic", serif;
+}
+
+.fw-100{
+    font-weight: 100;
+}
+.fw-200{
+    font-weight: 200;
+}
+.fw-300{
+    font-weight: 300;
+}
+.fw-400{
+    font-weight: 400;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fw-700{
+    font-weight: 700;
+}
+.fw-800{
+    font-weight: 800;
+}
+.fw-900{
+    font-weight: 900;
+}
+
+
+
+
+:root{
+    --mycolor01: #C4CBEA;
+    --mycolor02: #f3bbe0;
+    --mycolor03: #B29D7C;
+    --mycolor04: #E4CDD4;
+    --mycolor05: #F2DFE4;
+    --mycolor06: #F3EDE7;
+    --mycolor07: #dbc8a9;
+    --mycolor08: #ecebe7;
+    --mytextcolor01:#503d2a;
+    --mytextcolor02:#8f6d8a;
+}
+ 
+/*背景色*/
+.bg-01{
+    background-color: var(--mycolor07);
+}
+.bg-02{
+    background-color: var(--mycolor06);
+}
+.bg-03{
+    background-color: var(--mycolor04);
+}
+.bg-04{
+    background-color: var(--mycolor02);
+}
+.bg-05{
+    background-color: var(--mycolor01);
+}
+.bg-06{
+    background-color:rgb(0, 0, 0, 0.1);
+}
+
+/*按鈕*/
+.bg-btn01{
+    background-color: var(--mycolor02);
+    border-radius: 10px;
+    box-shadow:5px 5px 2px 2px var(--mycolor03);
+    margin-right: 10px;
+    padding: 5px;
+    text-decoration: none;
+}
+.bg-btn01:hover{
+    background-color: var(--mycolor02);
+    color: var(--mytextcolor01);
+    font-size: 20px;
+    box-shadow:5px 5px 2px 2px var(--mycolor03);
+}
+.bg-btn02{
+    background-color: var(--mycolor01);
+    border-radius: 10px;
+    box-shadow:5px 5px 2px 2px var(--mycolor03);
+    margin-right: 10px;
+    padding: 5px;
+}
+.bg-btn02:hover{
+    background-color: var(--mycolor01);
+    color: var(--mytextcolor01);
+    font-size: 20px;
+    box-shadow:5px 5px 2px 2px var(--mycolor03);
+}
+.bg-btn03{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    color:var(--mytextcolor01);
+    font-size: 16px;
+    background-color: var(--mycolor02);
+    border-radius: 10px;
+    box-shadow:5px 5px 2px 2px var(--mycolor03);
+    margin-right: 10px;
+}
+.bg-btn03:hover{
+    background-color: var(--mycolor01);
+    color: var(--mytextcolor01);
+    font-size: 20px;
+    box-shadow:5px 5px 2px 2px var(--mycolor03);
+}
+
+/* 外框色*/
+.myborder-01{
+    border: var(--mycolor02) 5px solid;
+}
+
+/* 文字顏色*/
+.text-color01{
+    color: var(--mytextcolor01)
+}
+.text-color02{
+    color: var(--mytextcolor02)
+}
+.text-color03{
+    color: #ffff;
+}
+
+
+.card-text > .badge:nth-child(1){
+    background-color: #f8d719; 
+    color: #ffff;
+}
+.card-text > .badge:nth-child(2){
+    background-color: #d4100a; 
+    color: #ffff;
+}
+.card-text > .badge:nth-child(3){
+    background-color: #0e9c09;
+    color: #ffff;
+}
+.card-text > .badge:nth-child(4){
+    background-color: #18d1f1; 
+    color: #130202;
+}
+.card-text > .badge:nth-child(5){
+    background-color: #7811a1;  
+    color: #ffff;
+}
+
+/* 背景圖*/
+.bg-cover{
+    background-position: center center;
+    background-size: cover;
+}
+
+/* 卷軸特效設定 */
+.box_roller{
+    position: relative;  /* 外層*/
+    overflow: hidden; 
+}
+.roller{
+    position: absolute;   /* 內層*/
+    width: 100%;                                /* roller佔box寬的100%*/
+    height: 100%;                               /* roller佔box高的100%*/
+    background-color: rgba(0, 0, 0, 0.2);     /* 透明度*/
+    top: -100%;                                  /* 起始位置*/
+    left: 0;                                  /* 在box中，靠左對齊*/
+    display: flex;                            /* 字水平*/
+    justify-content: center;                  /* 在box中 水平置中*/
+    align-items: center;                      /* 在box中 垂直置中*/
+}
+.box_roller:hover .roller{                     /* hover在box_roller時，roller的變化*/
+        top: 0;
+        transition: top 2s;
+    }
+
+    /* table 響應式 rwd */
+    @media screen and (max-width: 768px){
+        .table-rwd thead{
+            display: none;
+        }
+        .table-rwd tbody tr{
+            display: block;
+            margin-top: 15px;
+            border: 5px solid var(--mycolor01);
+        }
+        .table-rwd tbody tr td{
+            display: block;
+            overflow: hidden;
+        }
+        .table-rwd tbody tr td::before{
+            content: attr(data-th)" : ";
+            color: var(--mytextcolor01);
+            font-weight: bolder;
+            font-size: 22px;
+            display: block;
+            float: left;
+            width: 30%;
+            text-align: right;
+            padding-right: 15px;
+        }
+        .table-rwd tbody tr td span.table-col{
+            display: block;
+            float: left;
+            width: 70%;
+        }
+    }
+
+/* timeline */
+.timeline-section{
+    position: relative;        /* 外層*/
+}
+.timeline-section::before{ 
+    position: absolute;         /* 內層*/
+    content: "";
+    top: 10px;                                        /* timeline垂直直線距上方的距離*/
+    bottom: 10px;                                     /* timeline垂直直線距下方的距離*/
+    width:8px;                                        /* timeline垂直直線的寬度*/
+    background-color: var(--mycolor03);                /* 中間直線底色*/
+    left: 50%;                                        /*起始位置為頁面50%處 */
+    transform: translateX(-50%);                     /*非正中央，要往左拉回圖形的一半寬度，故用-50% */
+}
+.timeline-section-pointer{      
+    position: relative;                 /* 外層*/
+}
+.timeline-section-pointer::before{
+    position: absolute;                /* 內層*/
+    content: "";
+    width: 15px;                                         /* 圖案的寬度*/
+    height: 15px;                                         /* 圖案的高度*/
+    background-color: var(--mycolor08);                  /* 圖案底色*/
+    border-radius: 50%;                     /* 使原本正方形圖形 變 圓形!   圓形的半徑為正方形寬度的一半，故打 50%。 
+                                             也可打 7.5px(即15px/2)*/
+    left: 50%;                              /*起始位置為頁面50%處 */
+    transform: translateX(-50%);            /*非正中央，要往左拉回圖案的一半寬度，故用-50% */
+    top: 10%;                               /* 圖案距上方的距離*/   
+    border:3px solid var(--mycolor03)       /* 使圖案變空心，並設圖案外框色*/ 
+}
+
+.timeline-section-pointer:hover::before{     /* hover要寫在 before前面，代表hover在 */
+    width: 26px;                            /* timeline-section-pointer時，before(圓圈)會有什麼變化。*/
+    height: 26px;
+    border: 6px solid var(--mycolor02);
+}
+@media screen and (max-width: 768px){              /* 即小於md(手機版面)時，直線和圓圈要在哪*/
+.timeline-section::before{
+    left: -10px;                                  /* 線靠左。先用0，再自己根據網頁樣子微調 */
+}
+.timeline-section-pointer::before{
+    left: 3px;                                     /* 圓圈靠左。先用0，再自己根據網頁樣子微調*/
+}
+}
+
